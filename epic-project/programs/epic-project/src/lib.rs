@@ -11,7 +11,7 @@ pub mod epicproject {
     Ok(())
   }
 
-  pub fn add_gif(gif_link: String, ctx: Context<AddGif>) -> ProgramResult {
+  pub fn add_gif(ctx: Context<AddGif>, gif_link: String) -> ProgramResult {
     let base_account = &mut ctx.accounts.base_account;
 
     let item = ItemStruct {
