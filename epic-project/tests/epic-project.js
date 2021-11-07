@@ -1,5 +1,4 @@
 const anchor = require("@project-serum/anchor");
-const { sendAndConfirmRawTransaction } = require("@solana/web3.js");
 
 const { SystemProgram } = anchor.web3;
 
@@ -26,11 +25,14 @@ const main = async () => {
   let account = await program.account.baseAccount.fetch(baseAccount.publicKey);
   console.log("GIF count:", account.totalGifs.toString());
 
-  await program.rpc.addGif({
-    accounts: {
-      baseAccount: baseAccount.publicKey,
-    },
-  });
+  await program.rpc.addGif(
+    "https://media4.giphy.com/media/sJWNLTclcvVmw/giphy.gif",
+    {
+      accounts: {
+        baseAccount: baseAccount.publicKey,
+      },
+    }
+  );
 
   account = await program.account.baseAccount.fetch(baseAccount.publicKey);
   console.log("GIF count:", account.totalGifs.toString());
