@@ -1,6 +1,5 @@
 use anchor_lang::prelude::*;
 
-// declare_id!("BS4U4Dj4fr1UQQ15Ehu9sADe9jRjZ3c4doAWiH2qFq64");
 declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
 
 #[program]
@@ -44,7 +43,7 @@ pub struct AddGif<'info> {
 #[derive(Debug, Clone, AnchorSerialize, AnchorDeserialize)]
 pub struct ItemStruct {
   pub gif_link: String,
-  pub user_address: PubKey,
+  pub user_address: Pubkey,
 }
 
 #[account]
