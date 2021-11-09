@@ -115,6 +115,28 @@
   padding: 0.2em;
   color: #F3F4F5;
   font-size: 0.8em;
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.gif-item .cta-button {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  border: 0;
+  padding: .5em;
+  color: #121212;
+}
+
+.gif-item .cta-button:hover {
+  background-color: #CCC;
+}
+
+.gif-item .cta-button.send-tip {
+  margin-top: 55px;
 }
 
 .connected-container input[type='text'] {

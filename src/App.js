@@ -66,6 +66,8 @@ const ContentContainer = ({
             <div className="gif-item" key={gif.gifLink}>
               <img src={gif.gifLink} alt={gif.gifLink} />
               <div className="owner">{gif.userAddress.toString()}</div>
+              <button className="cta-button up-vote">👍 up vote</button>
+              <button className="cta-button send-tip">🧧 send tips</button>
             </div>
           ))}
         </div>
