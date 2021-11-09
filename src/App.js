@@ -65,6 +65,7 @@ const ContentContainer = ({
           {items.map((gif) => (
             <div className="gif-item" key={gif.gifLink}>
               <img src={gif.gifLink} alt={gif.gifLink} />
+              <div className="owner">{gif.userAddress.toString()}</div>
             </div>
           ))}
         </div>
