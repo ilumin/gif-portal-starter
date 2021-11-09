@@ -3,11 +3,14 @@ import twitterLogo from "./assets/twitter-logo.svg";
 import { Connection, PublicKey, clusterApiUrl } from "@solana/web3.js";
 import { Provider, Program, web3 } from "@project-serum/anchor";
 import idl from "./idl.json";
+import kp from "./keypair.json";
 
 import "./App.css";
 
 const { SystemProgram, Keypair } = web3;
-let baseAccount = Keypair.generate();
+const arr = Object.values(kp._keypair.secretKey);
+const secret = new Uint8Array(arr);
+const baseAccount = Keypair.fromSecretKey(secret);
 const programID = new PublicKey(idl.metadata.address);
 const network = clusterApiUrl("devnet");
 const opts = {
