@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-declare_id!("Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS");
+declare_id!("2KoE4sKpsRu4WxfRbhHaZ7kioR36SuNPuK9bMbEX4BNE");
 
 #[program]
 pub mod epicproject {
